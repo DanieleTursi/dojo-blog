@@ -1,13 +1,15 @@
 import React from 'react'
 
-const BlogList = ({blogs}) => {
-
+const BlogList = ({blogs,title,handleDelete}) => {
+   
   return (
     <div className='blog-list'> 
-        {blogs.map((bl) =>{
-        return (<div className='blog-preview' key={bl.id}>
-          <h2>{bl.title}</h2>
-          <p> Written by {bl.author}</p>
+     <h1>{title}</h1>
+        {blogs.map((blog) =>{
+        return (<div className='blog-preview' key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p> Written by {blog.author}</p>
+          <button onClick={()=>handleDelete(blog.id)}>Delete Blog</button>
           </div>
         );
     })}
