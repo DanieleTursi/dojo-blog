@@ -56,6 +56,9 @@
   color: white;
   background-color: black;
   margin: 10px auto;
-  border-radius: 3px;
+  border-radius: 3px
+}
 
+.blog-preview a{
+ text-decoration: none;;
 }
